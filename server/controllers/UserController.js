@@ -4,7 +4,7 @@ import razorpay from 'razorpay';
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import stripe from "stripe";
-
+import dotenv from 'dotenv';
 // API to register user
 const registerUser = async (req, res) => {
 
@@ -81,10 +81,10 @@ const userCredits = async (req, res) => {
     }
 }
 
-// razorpay gateway initialize
-const razorpayInstance = new razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID,
-    key_secret: process.env.RAZORPAY_KEY_SECRET,
+dotenv.config();
+const razorpay = new Razorpay({
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
 
