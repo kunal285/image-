@@ -1,6 +1,6 @@
 import userModel from "../models/userModel.js"
 import transactionModel from "../models/transactionModel.js"
-import razorpay from 'razorpay';
+// import razorpay from 'razorpay';
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import stripe from "stripe";
@@ -81,11 +81,11 @@ const userCredits = async (req, res) => {
     }
 }
 
-dotenv.config();
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET,
-});
+// dotenv.config();
+// const razorpay = new Razorpay({
+//   key_id: process.env.RAZORPAY_KEY_ID,
+//   key_secret: process.env.RAZORPAY_KEY_SECRET,
+// });
 
 
 // Payment API to add credits
