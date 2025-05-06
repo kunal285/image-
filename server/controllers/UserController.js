@@ -199,4 +199,4 @@ const verifyStripe = async (req, res) => {
 }
 
 
-export { registerUser, loginUser, userCredits, paymentRazorpay, verifyRazorpay, paymentStripe, verifyStripe }
+export { registerUser, loginUser, userCredits, paymentStripe, verifyStripe }
